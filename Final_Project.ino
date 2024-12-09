@@ -135,6 +135,7 @@ void loop() {
       playAlarm();
       if (switchChange(buttonCTracker) && buttonCTracker.switchState == LOW) {
         soundPlaying = false;
+        noTone(SPEAKER_PIN);
         timerMinutes = 24 * 60; // Reset timer
         timerRunning = true;
         updateTimerString();
